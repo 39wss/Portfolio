@@ -111,7 +111,7 @@ button {
 }
 /*Home*/
 #Home {
-  background-image: url("imgs/homebackground.jpg") center/ cover no-repeat;
+  background: url("imgs/homebackground.jpg") center/ cover no-repeat;
   padding: 40px;
   text-align: center;
 }
