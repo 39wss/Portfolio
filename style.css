@@ -130,8 +130,8 @@ button {
   text-align: center;
 }
 .home__avatar {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   border: 1px solid var(--color-light-white);
 }
@@ -365,4 +365,30 @@ button {
 }
 .testmonial__speech--bubble a {
   color: var(--color-blue);
+}
+
+/*Contact*/
+#contact {
+  background: var(--color-blue);
+}
+.contact__title,
+.contavt__email,
+.contact__rights {
+  color: var(--color-white);
+}
+
+.contact__title {
+  margin: 32px 0;
+}
+.contact__links {
+  font-size: var(--font-large);
+  margin: 24px 0;
+}
+.contact__links i {
+  cursor: pointer;
+  transition: all var(--annimation-duration) ease-in;
+}
+.contact__links i:hover {
+  transform: scale(1.1);
+  color: var(--color-dark-blue);
 }
