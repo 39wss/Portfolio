@@ -117,11 +117,17 @@ button {
   cursor: pointer;
   border-radius: var(--border-radius);
 }
-.navbar_menu__item.active {
-  border: 1px solid var(--color-white);
-}
+
 .navbar_menu__item:hover {
   background-color: var(--color-dark-blue);
+}
+.navbar__toggle-btn {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: 22px;
+  color: var(--color-white);
+  display: none;
 }
 /*Home*/
 #Home {
@@ -391,4 +397,37 @@ button {
 .contact__links i:hover {
   transform: scale(1.1);
   color: var(--color-dark-blue);
+}
+
+/*For blow 768px screen width*/
+@media all and (max-width: 768px) {
+  .navbar__toggle-btn {
+    display: block;
+  }
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar__menu {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    display: none;
+  }
+  .about_majors {
+    flex-direction: column;
+  }
+  .major {
+    margin-bottom: 38px;
+  }
+  .skillset {
+    flex-direction: column;
+  }
+  .project {
+    flex-grow: 1;
+  }
+  .testimonial img {
+    width: 80px;
+    height: 80px;
+  }
 }
