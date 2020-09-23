@@ -335,7 +335,34 @@ button {
   background-color: var(--color-dark-white);
 }
 /*Testimonial*/
+#Testimonials {
+  background: var(--color-light-white);
+}
+.testimonials {
+  margin: 40px;
+}
+.testimonial {
+  display: flex;
+  margin: 32px 0;
+}
 .testimonial img {
-  width: 10%;
-  height: 10%;
+  width: 150px;
+  height: 150px;
+}
+.testimonial img:nth-child(odd) {
+  margin-right: 40px;
+}
+.testimonial img:nth-child(even) {
+  margin-left: 40px;
+}
+.testmonial__speech--bubble {
+  padding: 18px;
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+}
+.testmonial__speech--bubble p {
+  color: var(--color-light-grey);
+}
+.testmonial__speech--bubble a {
+  color: var(--color-blue);
 }
