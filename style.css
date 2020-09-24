@@ -97,16 +97,23 @@ button {
 /*Navbar*/
 
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-blue);
+  background-color: transparent;
   align-items: center;
   color: var(--color-white);
   padding: 16px;
+  transition: all var(--annimation-duration) ease-in-out;
+}
+#navbar.navbar--dark {
+  z-index: 1;
+  background: var(--color-blue);
 }
 .navbar__logo {
   font-weight: var(--weight-semi-bold);
-  font-size: var(--font-small);
+  font-size: var(--font-regular);
 }
 .navbar__menu {
   display: flex;
@@ -117,7 +124,9 @@ button {
   cursor: pointer;
   border-radius: var(--border-radius);
 }
-
+.navbar_menu__item.active {
+  border: 1px solid var(--color-light-white);
+}
 .navbar_menu__item:hover {
   background-color: var(--color-dark-blue);
 }
@@ -133,6 +142,7 @@ button {
 #Home {
   background: url("imgs/homebackground.jpg") center/ cover no-repeat;
   padding: 40px;
+  padding-top: 120px;
   text-align: center;
 }
 .home__avatar {
