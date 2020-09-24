@@ -70,7 +70,7 @@ p {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   cursor: default;
 }
 a {
@@ -140,7 +140,7 @@ button {
 }
 /*Home*/
 #Home {
-  background: url("imgs/homebackground.jpg") center/ cover no-repeat;
+  background: url('imgs/homebackground.jpg') center/ cover no-repeat;
   padding: 40px;
   padding-top: 120px;
   text-align: center;
@@ -340,7 +340,7 @@ button {
   color: var(--color-white);
 }
 .project__description h3::after {
-  content: "";
+  content: '';
   display: block;
   position: relative;
   left: 50%;
