@@ -354,9 +354,9 @@ button {
   display: block;
   position: relative;
   left: 50%;
-  margin-left: -12.5px;
+  transform: translateX(-55%);
   margin-top: 8px;
-  width: 25px;
+  width: 50px;
   height: 2px;
   background-color: var(--color-dark-white);
 }
@@ -441,12 +441,23 @@ button {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-blue);
+    z-index: 1;
+  }
+  #navbar.navbar--dark {
+    padding: 16px;
   }
   .navbar__menu {
     width: 100%;
     flex-direction: column;
     text-align: center;
     display: none;
+    margin-top: 10px;
+  }
+  .navbar__menu.open {
+    display: block;
+  }
+  .navbar_menu__item {
   }
   .about_majors {
     flex-direction: column;
