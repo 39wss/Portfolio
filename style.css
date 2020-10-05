@@ -122,13 +122,13 @@ button {
   padding: 8px 12px;
   margin: 0 4px;
   cursor: pointer;
+  border: 1px solid transparent;
   border-radius: var(--border-radius);
 }
-.navbar_menu__item.active {
-  border: 1px solid var(--color-light-white);
-}
+
 .navbar_menu__item:hover {
   background-color: var(--color-dark-blue);
+  border: 1px solid var(--color-light-white);
 }
 .navbar__toggle-btn {
   position: absolute;
@@ -275,7 +275,7 @@ button {
   font-size: var(--font-regular);
   padding: 8px 48px;
 }
-.work__btn.active,
+.work__btn.selected,
 .work__btn:hover {
   background: var(--color-blue);
   color: var(--color-white);
@@ -294,7 +294,7 @@ button {
   opacity: 0;
   transition: var(--annimation-duration) ease-in;
 }
-.work__btn.active .categories__conut,
+.work__btn.selected .categories__conut,
 .work__btn:hover .categories__conut {
   opacity: 1;
   top: 0;
