@@ -165,6 +165,9 @@ button {
   border-radius: var(--border-radius);
 }
 
+.home__contact:hover {
+  background-color: var(--color-blue);
+}
 /*About*/
 .about_majors {
   display: flex;
@@ -274,6 +277,7 @@ button {
   border-radius: var(--border-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
+  position: relative;
 }
 .work__btn.selected,
 .work__btn:hover {
@@ -288,9 +292,9 @@ button {
   height: 24px;
   line-height: 24px;
   display: inline-block;
-  position: relative;
+  position: absolute;
   top: -20px;
-  right: -4px;
+  right: 16px;
   opacity: 0;
   transition: var(--annimation-duration) ease-in;
 }
@@ -435,6 +439,14 @@ button {
 }
 /*For blow 768px screen width*/
 @media all and (max-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
   .navbar__toggle-btn {
     display: block;
   }
@@ -459,11 +471,20 @@ button {
   }
   .navbar_menu__item {
   }
+  .section {
+    padding: 50px;
+  }
   .about_majors {
     flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0;
   }
   .major {
-    margin-bottom: 38px;
+    margin-bottom: 30px;
+  }
+  .work__btn {
+    margin: 4px 0;
+    width: 80%;
   }
   .skillset {
     flex-direction: column;
@@ -471,8 +492,24 @@ button {
   .project {
     flex-grow: 1;
   }
+  .testimonial {
+    flex-direction: column;
+    align-items: center;
+  }
+  .testimonial:last-child {
+    flex-direction: column-reverse;
+  }
   .testimonial img {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
+  }
+  .testimonial img:nth-child(odd),
+  .testimonial img:nth-child(even) {
+    margin: 0px;
+    margin-bottom: 30px;
+  }
+  .arrow-up {
+    bottom: 16px;
+    right: 16px;
   }
 }
