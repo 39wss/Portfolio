@@ -301,7 +301,7 @@ button {
 .work__btn.selected .categories__conut,
 .work__btn:hover .categories__conut {
   opacity: 1;
-  top: 0;
+  top: 7px;
 }
 .work__projects {
   display: flex;
@@ -472,7 +472,7 @@ button {
   .navbar_menu__item {
   }
   .section {
-    padding: 50px;
+    padding: 16px;
   }
   .about_majors {
     flex-direction: column;
