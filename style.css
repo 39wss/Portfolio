@@ -5,13 +5,13 @@
   --color-white: #ffffff;
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
-  --color-blue: #5d8cb6;
-  --color-dark-blue: #3e5d79;
+  --color-blue: #02557d;
+  --color-dark-blue: #0d4663;
   --color-dark-grey: #4d4d4d;
   --color-grey: #616161;
   --color-light-grey: #7c7979;
   --color-purple: #e5d1ff;
-  --color-mint: #98f3eb;
+  --color-mint: #5aaddd;
   --color-black: #000000;
   --color-yellow: #e7d1bc;
 
@@ -262,7 +262,7 @@ button {
 }
 .skill_value {
   height: 3px;
-  background: var(--color-blue);
+  background: var(--color-mint);
 }
 .tools,
 .etc {
@@ -469,7 +469,9 @@ button {
   .navbar__menu.open {
     display: block;
   }
-  .navbar_menu__item {
+  .home__avatar {
+    width: 160px;
+    height: 160px;
   }
   .section {
     padding: 16px;
@@ -479,12 +481,21 @@ button {
     margin-top: 30px;
     margin-bottom: 0;
   }
+  #About p {
+    margin: 0 30px;
+  }
+  #About .school_description p {
+    margin: 0px 0px;
+  }
   .major {
     margin-bottom: 30px;
   }
   .work__btn {
     margin: 4px 0;
     width: 80%;
+  }
+  #Skills .section_container p {
+    margin: 0 30px;
   }
   .skillset {
     flex-direction: column;
