@@ -29,126 +29,84 @@
         <li class="navbar_menu__item" data-link="#About">About</li>
         <li class="navbar_menu__item" data-link="#Skills">Skills</li>
         <li class="navbar_menu__item" data-link="#Mywork">My work</li>
-        <li class="navbar_menu__item" data-link="#Testimonials">Testimonial</li>
         <li class="navbar_menu__item" data-link="#contact">Contact</li>
       </ul>
     
-      <! --- Toggle btn--- >
+      <!--Toggle btn-->
     <button class="navbar__toggle-btn">
       <i class="fas fa-bars"></i>
     </button>
+    <img src="imgs/navbar__close-btn.png" alt="navbar__close-btn" class="navbar__close-btn">
     </nav>
-
-    
     <!-- Home -->
     <section id="Home">
     <div class="home__contanier">
-      <img src="imgs/photo.jpeg" alt="photo" class="home__avatar">
-      <h1 class="home__title">Hello, <br>I'm Dream Coder</h1>
-      <h2 class="home__description">A Front-end Developer in Incheon, Korea</h2>
+      <h1 class="home__title">2020 Portfolio</h1>
+      <p class="home__description">Hanseol Kim</p>
       <button class="home__contact">CONTACT ME</button>
     </div> 
     </section>
     <!-- About -->
     <section id="About" class="section section_container">
-      <h1>About me</h1>
-      <p>인천직업능력교육원에 고교위탁 웹디자인 과정으로 퍼블리싱과 디자인을 배웠습니다.<br>
-          퍼블리싱을 배우면서 웹을 만드는 것에 흥미를 느껴 본격적으로 프론트엔드를 공부하고 있습니다.
-      </p>
-      <div class="about_majors">
-        <div class="major">
-          <div class="major__icon"><i class="fab fa-html5"></i></div>
-          <h2 class="major__title">HTML</h2>
-          <div class="major__description">Learning HTML</div>
-        </div>
-        <div class="major">
-          <div class="major__icon"><i class="fab fa-css3-alt"></i></div>
-          <h2 class="major__title">CSS</h2>
-          <div class="major__description">Learning CSS</div>
-        </div>
-        <div class="major">
-          <div class="major__icon"><i class="fas fa-magic"></i></div>
-          <h2 class="major__title">Wed Design</h2>
-          <div class="major__description">- 웹디자인기능사<br>- 컴퓨터그래픽스운용기능사<br>- GTQ 포토샵</div>
-        </div>
-      </div>
-      <div class="about_school">
-        <div class="school">
-          <i class="fas fa-chalkboard-teacher"></i>
+      <div class="about__inpo">
+      <img src="imgs/photo.jpeg" alt="photo" class="about__avatar">
+      <div class="school">
           <div class="school_description">
             <p class="school__name">인천직업능력교육원</p>
-          <p class="school__period">2020.04 ~ Until now</p>
+            <p class="school__period">2020.04 ~ Until now</p>
+          </div>
+      </div>
+      </div>
+      <div class="about__me">
+        <div class="about__me-talk">
+          <h1>About me</h1>
+          <p>인천직업능력교육원에 고교위탁 웹디자인 과정으로 퍼블리싱과 디자인을 배웠습니다.
+              퍼블리싱을 배우면서 웹을 만드는 것에 흥미를 느껴 본격적으로 프론트엔드를 공부하고 있습니다.
+          </p>
         </div>
-          
+        <div class="cerificate">
+          <h1>Cerificate</h1>
+          <p>웹디자인기능사<br>
+            컴퓨터그래픽스운용기능사<br>
+            GTQ포토샵 1급
+          </p>
         </div>
       </div>
     </section>
     <!-- Skills -->
     <section id="Skills" class="section">
       <div class="section_container">
-      <h1>Skills</h1>
-      <h4>Skills & Attributes</h4>
-      <p>현재 Javascript를 배우고 있고 활용할 수 있게 되면 다른 언어도 배워나갈 예정입니다.
-      <br>준비성이 좋고 자료조사를 철저히 하여 정확히 이해해 사용할 수 있습니다. 
-      </p>
+      <div class="skills_txt">
+        <h1>Skills & Attributes</h1>
+        <h3>Projects</h3>
+      </div>
       <div class="skillset">
-        <div class="skillset__left">
+        <div class="skillsets skills">
           <h3 class="skillset__title">Skills</h3>
-          <div class="skill">
-            <div class="skill_description">
-              <span>HTML</span>
-              <span>80%</span>
-            </div>
-            <div class="skill__bar">
-              <div class="skill_value" style="width: 80%;"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <div class="skill_description">
-              <span>CSS</span>
-              <span>70%</span>
-            </div>
-            <div class="skill__bar">
-              <div class="skill_value" style="width: 70%;"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <div class="skill_description">
-              <span>Javascript</span>
-              <span>30%</span>
-            </div>
-            <div class="skill__bar">
-              <div class="skill_value" style="width: 30%;"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <div class="skill_description">
-              <span>jQuery</span>
-              <span>30%</span>
-            </div>
-            <div class="skill__bar">
-              <div class="skill_value" style="width: 30%;"></div>
-            </div>
-          </div>
+              <ul class="skill__list">
+                <li><img src="imgs/skills/HTML.png" alt="icon"><span class="skills__percent">80</span><p>HTML</p></li>
+                <li><img src="imgs/skills/css.png" alt="icon"><span class="skills__percent">70</span><p>CSS</p></li>
+                <li><img src="imgs/skills/javascript.png" alt="icon"><span class="skills__percent">30</span><p>Javascript</p></li>
+                <li><img src="imgs/skills/jquery.png" alt="icon"><span class="skills__percent">30</span><p>jQuery</p></li>
+              </ul>
         </div>
-        <div class="skillset__right">
-          <div class="tools">
-            <h3 class="skillset__title">Tools</h3>
+        <div class="skillsets tools">
+          <h3 class="skillset__title">Tools</h3>
             <ul class="tools__list">
-              <li><span>Visual Studio Code</span></li>
-              <li><span>EditPlus</span></li>
-              <li><span>DreamWeaver</span></li>
-              <li><span>Brackets</span></li>
+              <li><img src="imgs/skills/vscode.png" alt="icon"><p>VSCode</p></li>
+              <li><img src="imgs/skills/EditPlus.png" alt="icon"><p>EditPlus</p></li>
+              <li><img src="imgs/skills/Dreamweaver.png" alt="icon"><p>DW</p></li>
+              <li><img src="imgs/skills/brackets.png" alt="icon"><p>Brackets</p></li>
             </ul>
-          </div>
-          <div class="etc">
-            <h3 class="skillset__title">Etc</h3>
+        </div>
+        <div class="skillsets etc">
+          <h3 class="skillset__title">Etc</h3>
             <ul class="etc__list">
-              <li><span>GitHub</span></li>
-              <li><span>GitHub</span></li>
-              <li><span>GitHub</span></li>
+              <li><img src="imgs/skills/GitHub.png" alt="icon"><p>GitHub</p></li>
+              <li><p></p></li>
+              <li><p></p></li>
+              <li><p></p></li>
             </ul>
-          </div>
         </div>
       </div>
     </div>
@@ -166,6 +124,13 @@
       </div>
 
       <div class="work__projects">
+        <a href="https://39wss.github.io/Redesign-Museum/" class="project" target="blank" data-type="Responsive Web">
+          <img src="imgs/projects/museum.png" alt="museum" class="project__img">
+          <div class="project__description">
+            <h3>국립중앙박물관</h3>
+            <span>국립중앙박물관 사이트를 반응형으로 <br>리디자인, 7일 소요</span>
+          </div>
+        </a>
         <a href="https://github.com/39wss/Haagnedazs" class="project" target="blank" data-type="Wedsite">
           <img src="imgs/projects/Haagendazs.png" alt="Haagendazs" class="project__img">
           <div class="project__description">
@@ -180,20 +145,6 @@
             <span>사회초년생을 위한 뉴스레터 어피티, <br>어피티에 사이트를 반응형으로 리다지인 <br>2주 소요</span>
           </div>
         </a>
-        <a href="imgs/projects/Infographics_timeline.jpeg" class="project" data-type="Infographics">
-          <img src="imgs/projects/Infographics_timeline.jpeg" alt="timeline" class="project__img">
-          <div class="project__description">
-            <h3>정세랑 소설 모음</h3>
-            <span>작가 정세랑의 작품들을 시간 순으로 나열<br> 2일 소요</span>
-          </div>
-        </a>
-        <a href="https://39wss.github.io/Redesign-Museum/" class="project" target="blank" data-type="Responsive Web">
-          <img src="imgs/projects/museum.png" alt="museum" class="project__img">
-          <div class="project__description">
-            <h3>국립중앙박물관</h3>
-            <span>국립중앙박물관 사이트를 반응형으로 <br>리디자인, 7일 소요</span>
-          </div>
-        </a>
         <a href="#" class="project" target="blank" data-type="Wedsite">
           <img src="imgs/projects/navbar.png" alt="" class="project__img">
           <div class="project__description">
@@ -202,10 +153,10 @@
           </div>
         </a>
         <a href="#" class="project" target="blank" data-type="Responsive Web">
-          <img src="imgs/projects/game.png" alt="" class="project__img">
+          <img src="imgs/projects/studioC.png" alt="" class="project__img">
           <div class="project__description">
-            <h3>title</h3>
-            <span>Description</span>
+            <h3>STUDIO C</h3>
+            <span>가상 의류 쇼핑몰  STUDIO C 제작<br> 자체 제작, 5일 소요</span>
           </div>
         </a>
         <a href="#" class="project" target="blank" data-type="Wedsite">
@@ -213,6 +164,13 @@
           <div class="project__description">
             <h3>title</h3>
             <span>Description</span>
+          </div>
+        </a>
+        <a href="imgs/projects/Infographics_timeline.jpeg" class="project" data-type="Infographics">
+          <img src="imgs/projects/Infographics_timeline.jpeg" alt="timeline" class="project__img">
+          <div class="project__description">
+            <h3>정세랑 소설 모음</h3>
+            <span>작가 정세랑의 작품들을 시간 순으로 나열<br> 2일 소요</span>
           </div>
         </a>
         <a href="imgs/projects/Infographics_position.jpeg" class="project" data-type="Infographics">
@@ -225,53 +183,19 @@
       </div>
     </div>
     </section>
-    <!-- Test -->
-    <section id="Testimonials" class="section">
-      <div class="section_container">
-      <h1>Testimonial</h1>
-      <h3>See what they say adout me</h3>
-      <div class="testimonials">
-        <div class="testimonial">
-          <img src="imgs/testimonial/person1.png" alt="person" class="testimonal__avatar">
-          <div class="testmonial__speech--bubble">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-              Pariatur veritatis delectus ut ab, tempora beatae dolore enim
-              quibusdam deleniti reprehenderit dolor autem quo accusantium. 
-              Rem laborum soluta totam? Dolorem, nihil?
-            </p>
-            <p class="name"><a href="#">Eille</a> / DreamCoding</p>
-          </div>
-        </div>
-        <div class="testimonial">
-          <div class="testmonial__speech--bubble">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-              Pariatur veritatis delectus ut ab, tempora beatae dolore enim
-              quibusdam deleniti reprehenderit dolor autem quo accusantium. 
-              Rem laborum soluta totam? Dolorem, nihil?
-            </p>
-            <p class="name"><a href="#">Eille</a> / DreamCoding</p>
-          
-        </div>
-        <img src="imgs/testimonial/person1.png" alt="person" class="testimonal__avatar"></div>
-      </div>
-    </div>
-    </section>
+    
     <!-- Contact -->
     <section id="contact" class="section">
       <h1 class="contact__title">Let's talk</h1>
       <h2 class="contavt__email">kimhanseolzz@gmail.com</h2>
-      <div class="contact__links">
+      <div class="contact__link">
         <a href="https://github.com/39wss" target="blank">
           <i class="fab fa-github"></i>
         </a>
-        <a href="#" target="blank">
-          <i class="fab fa-linkedin"></i>
-        </a>
         </div>
         <p class="contact__rights">
-          2020 39wss Portfolio - All rights reserved
+          2020 Hanseol Kim Portfolio - All rights reserved
         </p>
-      
     </section>
     <!--Arrow Up-->
     <button class="arrow-up">
