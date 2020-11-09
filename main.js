@@ -36,9 +36,12 @@ navbarToggleBtn.addEventListener('click', () => {
 navbarCloseBtn.addEventListener('click', () => {
   navbarMenu.classList.remove('open');
   navbarCloseBtn.classList.remove('open');
-  navbarCloseBtn.classList.remove('open');
   $('html, body').remove('scrollfixed');
 });
+
+navbarMenu.addEventListener('click', () => {
+  navbarCloseBtn.classList.remove('open');
+})
 // Hadle click on "contact me" button on home
 const homeContactBtn = document.querySelector('.home__contact');
 homeContactBtn.addEventListener('click', () => {
