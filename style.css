@@ -150,7 +150,10 @@ button {
 /*Home*/
 #Home {
   background: url('imgs/homebackground.jpg') center/ cover no-repeat;
-  padding: 200px 80px 120px;
+  height: 45rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
 }
 .home__title,
@@ -171,11 +174,16 @@ button {
 }
 /*About*/
 #About {
+  width: 100%;
   display: flex;
+  justify-content: space-around;
   height: 40rem;
+  max-width: 100%;
+  margin: 0;
 }
 .about__inpo,
 .about__me {
+  width: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -183,7 +191,6 @@ button {
 }
 .about__inpo {
   justify-content: center;
-  width: 50%;
 }
 .about__inpo h2 {
   margin: 0;
@@ -211,7 +218,6 @@ button {
   color: var(--color-grey);
 }
 .about__me {
-  width: 45%;
   justify-content: space-between;
   border: 1px solid var(--color-light-grey);
   border-radius: 11px;
