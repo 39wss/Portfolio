@@ -31,12 +31,11 @@ const navbarCloseBtn = document.querySelector('.navbar__close-btn');
 navbarToggleBtn.addEventListener('click', () => {
   navbarMenu.classList.toggle('open');
   navbarCloseBtn.classList.add('open');
-  $('html, body').add('scrollfixed');
 });
+
 navbarCloseBtn.addEventListener('click', () => {
   navbarMenu.classList.remove('open');
   navbarCloseBtn.classList.remove('open');
-  $('html, body').remove('scrollfixed');
 });
 
 navbarMenu.addEventListener('click', () => {

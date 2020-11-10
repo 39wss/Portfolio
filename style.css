@@ -10,10 +10,7 @@
   --color-dark-grey: #4d4d4d;
   --color-grey: #616161;
   --color-light-grey: #7c7979;
-  --color-purple: #e5d1ff;
-  --color-mint: #5aaddd;
   --color-black: #000000;
-  --color-yellow: #8f8984;
   --color-red: rgb(240, 39, 39);
 
   /* Font size */
@@ -153,7 +150,7 @@ button {
 /*Home*/
 #Home {
   background: url('imgs/homebackground.jpg') center/ cover no-repeat;
-  padding: 150px 80px 100px;
+  padding: 200px 80px 120px;
   text-align: center;
 }
 .home__title,
@@ -179,41 +176,79 @@ button {
 }
 .about__inpo,
 .about__me {
-  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 .about__inpo {
   justify-content: center;
+  width: 50%;
 }
-.about__me {
-  padding: 50px;
-  justify-content: space-around;
+.about__inpo h2 {
+  margin: 0;
 }
 .about__avatar {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border: 1px solid var(--color-light-white);
+  margin-bottom: 16px;
 }
 .school {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-top: 24px;
+  margin: 12px;
 }
-.school_description {
-  margin: 0px 16px;
-  text-align: left;
-}
-.school__period {
-  color: var(--color-light-grey);
+.school_description:first-child {
+  margin-bottom: 8px;
 }
 .school__name {
   font-size: var(--font-small);
 }
-.school__period {
+.about__addinpo {
   font-size: var(--font-micro);
+  color: var(--color-grey);
+}
+.about__me {
+  width: 45%;
+  justify-content: space-between;
+  border: 1px solid var(--color-light-grey);
+  border-radius: 11px;
+}
+.about__me__topbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  padding: 0 10px;
+  background: var(--color-light-grey);
+  border-radius: 10px 10px 0 0;
+}
+.circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.circle.red {
+  background: rgb(231, 48, 48);
+}
+.circle.yellow {
+  background: rgb(255, 235, 58);
+}
+.circle.green {
+  background: rgb(81, 243, 81);
+}
+.about__me-talk h1 {
+  margin-top: 0;
+}
+.about__me__txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 90%;
+  padding: 50px;
 }
 .about__me h1 {
   font-size: var(--font-medium);
@@ -307,7 +342,7 @@ button {
   color: var(--color-white);
 }
 .categories__conut {
-  background-color: var(--color-yellow);
+  background-color: var(--color-light-grey);
   border-radius: 50%;
   color: var(--color-white);
   width: 24px;
@@ -437,12 +472,17 @@ button {
     --font-small: 14px;
     --font-micro: 12px;
   }
+  .section {
+    padding: 20px;
+  }
+  /*
   .scrollfixed {
     height: 100%;
     min-height: 100%;
     overflow: hidden !important;
     touch-action: none;
   }
+  */
   /*Nav*/
   .navbar__toggle-btn {
     display: block;
@@ -463,13 +503,13 @@ button {
     z-index: 1;
     width: 100%;
     height: 100vh;
-    padding: 45% 0;
+    padding: 45% 35%;
     margin: 0;
     left: 0;
     top: 0;
     flex-direction: column;
     text-align: center;
-    background-color: var(--color-black);
+    background-color: rgba(0, 0, 0, 0.973);
     display: none;
   }
   .navbar_menu__item:hover {
@@ -482,26 +522,29 @@ button {
   }
   /*About*/
   #About {
+    height: auto;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 60px 16px;
+    padding: 60px 7%;
   }
   .about__inpo,
   .about__me {
     width: 100%;
   }
+  .about__inpo {
+    margin-bottom: 32px;
+  }
   .about__avatar {
     width: 160px;
     height: 160px;
   }
-  .section {
-    padding: 20px;
-  }
   #About p {
-    margin: 0 30px;
+    margin: 0 10px;
   }
   #About .school_description p {
     margin: 0px 0px;
+  }
+  .about__me__txt {
+    padding: 30px;
   }
   /*Skills*/
   #Skills {
