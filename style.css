@@ -330,8 +330,20 @@ button {
   color: var(--color-white);
   font-size: var(--font-micro);
 }
-
 /*Work*/
+.more__inpo i {
+  font-size: var(--font-regular);
+  cursor: pointer;
+  color: var(--color-blue);
+  border: 2px solid var(--color-blue);
+  transition: 0.5s;
+  border-radius: 50%;
+  padding: 5px 6.5px;
+}
+.more__inpo i:hover {
+  color: var(--color-white);
+  background: var(--color-blue);
+}
 .work__categories {
   margin: 40px;
 }
