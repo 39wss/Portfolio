@@ -7,6 +7,7 @@
   --color-studioc: #424347;
   --color-museum: #6658b0;
   --color-haagendazs: #691c31;
+  --color-ready: #014835;
 }
 html {
   font-family: 'Noto Sans KR', sans-serif;
@@ -30,10 +31,25 @@ img {
   height: auto;
 }
 .global-width {
-  max-width: 620px;
   margin: auto;
-  padding: 0 1rem;
+  padding: 5% 15%;
   text-align: center;
+}
+.header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Playfair Display', serif;
+}
+.header__circle {
+  position: absolute;
+  width: 15rem;
+  height: 15rem;
+  border: 1px solid var(--color-black);
+  border-radius: 50%;
 }
 .scroll-graphic {
   position: sticky;
@@ -67,10 +83,10 @@ img {
   background: linear-gradient(to top right, #691c31, #ede5e8);
 }
 .content__img:nth-child(5) {
-  background: linear-gradient(to top right, #014835, #ffffff);
+  background: linear-gradient(to top right, #014835, #e8fcf0);
 }
 .content__img:nth-child(6) {
-  background: linear-gradient(to top right, #014835, #ffffff);
+  background: linear-gradient(to top right, #014835, #e8fcf0);
 }
 .visible {
   opacity: 1;
@@ -115,8 +131,35 @@ button:hover {
 .content_txt:nth-child(4) button:hover {
   color: var(--color-haagendazs);
 }
+.content_txt:nth-child(5) button:hover {
+  color: var(--color-ready);
+}
+.content_txt:nth-child(6) button:hover {
+  color: var(--color-ready);
+}
 .global-footer {
   color: black;
   padding: 2rem 0;
   text-align: center;
+}
+@media all and (max-width: 768px) {
+  .content__title {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  p {
+    font-size: 14px;
+  }
+  button {
+    padding: 8px 12px;
+  }
+  img {
+    margin-bottom: 75%;
+    margin-left: 0%;
+    max-width: 75%;
+    height: auto;
+  }
+  .scroll-text {
+    width: 60%;
+  }
 }
