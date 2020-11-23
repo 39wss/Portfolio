@@ -112,7 +112,7 @@ button {
 }
 .navbar__logo {
   font-weight: var(--weight-semi-bold);
-  font-size: var(--font-regular);
+  font-size: var(--font-medium);
 }
 .navbar__menu {
   display: flex;
@@ -136,16 +136,8 @@ button {
   color: var(--color-white);
   display: none;
 }
-.navbar__close-btn {
-  position: absolute;
-  top: 30px;
-  color: var(--color-white);
-  width: 30px;
-  height: 30px;
+.navbar__toggle-btn i {
   cursor: pointer;
-  display: none;
-  right: 20px;
-  z-index: 3;
 }
 /*Home*/
 #Home {
@@ -504,9 +496,7 @@ button {
   /*Nav*/
   .navbar__toggle-btn {
     display: block;
-  }
-  .navbar__close-btn.open {
-    display: block;
+    z-index: 1;
   }
   #navbar {
     flex-direction: column;

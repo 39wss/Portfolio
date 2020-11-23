@@ -27,20 +27,10 @@ navbarMenu.addEventListener('click', (event) => {
 
 // Navbar toggle button for small srceen
 const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
-const navbarCloseBtn = document.querySelector('.navbar__close-btn');
 navbarToggleBtn.addEventListener('click', () => {
   navbarMenu.classList.toggle('open');
-  navbarCloseBtn.classList.add('open');
 });
 
-navbarCloseBtn.addEventListener('click', () => {
-  navbarMenu.classList.remove('open');
-  navbarCloseBtn.classList.remove('open');
-});
-
-navbarMenu.addEventListener('click', () => {
-  navbarCloseBtn.classList.remove('open');
-})
 // Hadle click on "contact me" button on home
 const homeContactBtn = document.querySelector('.home__contact');
 homeContactBtn.addEventListener('click', () => {
