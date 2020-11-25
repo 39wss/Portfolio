@@ -141,7 +141,7 @@ button {
 /*Home*/
 #Home {
   background: url('imgs/homebackground.jpg') center/ cover no-repeat;
-  height: 50rem;
+  height: 1080px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -209,6 +209,7 @@ button {
   color: var(--color-grey);
 }
 .about__me {
+  width: 500px;
   justify-content: space-between;
   border: 1px solid var(--color-light-grey);
   border-radius: 11px;
@@ -245,7 +246,7 @@ button {
   flex-direction: column;
   justify-content: space-around;
   height: 90%;
-  padding: 50px;
+  padding: 40px;
 }
 .about__me h1 {
   font-size: var(--font-medium);
