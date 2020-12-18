@@ -4,64 +4,53 @@
   /* Color */
   --color-white: #ffffff;
   --color-light-white: #eeeeee;
-  --color-dark-white: #bdbdbd;
   --color-blue: #102b44;
   --color-light-blue: #4281bb;
-  --color-dark-grey: #4d4d4d;
   --color-grey: #616161;
   --color-light-grey: #7c7979;
   --color-black: #000000;
   --color-red: rgb(240, 39, 39);
-
   /* Font size */
   --font-large: 48px;
   --font-medium: 28px;
   --font-regular: 18px;
   --font-small: 16px;
   --font-micro: 14px;
-
   /* Font weight */
   --weight-bold: 700;
   --weight-semi-bold: 600;
   --weight-regular: 400;
-
   /*Size*/
   --border-radius: 5px;
-
   /*Annimation*/
   --annimation-duration: 300ms;
 }
 
 /* Typography */
-
 h1 {
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
   color: var(--color-black);
   margin: 16px 0px;
 }
-
 h2 {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   color: var(--color-black);
   margin: 8px 0;
 }
-
 h3 {
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
   color: var(--color-black);
   margin: 8px 0;
 }
-
 p {
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
   color: var(--color-black);
   margin: 4px 0;
 }
-
 /*Universal tags*/
 * {
   box-sizing: border-box;
@@ -75,14 +64,12 @@ a {
   text-decoration: none;
   color: var(--color-white);
 }
-
 button {
   background: transparent;
   cursor: pointer;
   border: none;
   outline: none;
 }
-
 .section {
   padding: 50px 40px;
   text-align: center;
@@ -94,7 +81,6 @@ button {
   height: auto;
 }
 /*Navbar*/
-
 #navbar {
   position: fixed;
   width: 100%;
@@ -118,6 +104,7 @@ button {
   display: flex;
 }
 .navbar_menu__item {
+  position: relative;
   padding: 8px 12px;
   margin: 0 4px;
   cursor: pointer;
@@ -127,8 +114,19 @@ button {
 .navbar_menu__item.active {
   border-bottom: 1px solid var(--color-white);
 }
-.navbar_menu__item:hover {
-  border-bottom: 1px solid var(--color-light-white);
+.navbar_menu__item::before {
+  content: '';
+  position: absolute;
+  background: var(--color-light-white);
+  width: 0%;
+  height: 1px;
+  bottom: -1px;
+  transition: 0.5s;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.navbar_menu__item:hover::before{
+  width: 100%;
 }
 .navbar__toggle-btn {
   position: absolute;
@@ -141,13 +139,16 @@ button {
 .navbar__toggle-btn i {
   cursor: pointer;
 }
+.navbar__toggle-btn.navbar--dark {
+  color: var(--color-blue);
+}
 /*Home*/
 #Home {
   background: url('imgs/homebackground.jpg') center/ cover no-repeat;
   height: 1080px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
 }
 .home__title,
@@ -164,7 +165,8 @@ button {
   border-radius: var(--border-radius);
 }
 .home__contact:hover {
-  background-color: var(--color-light-blue);
+  color: var(--color-blue);
+  background-color: var(--color-white);
 }
 /*About*/
 #About {
@@ -214,8 +216,9 @@ button {
 .about__me {
   width: 500px;
   justify-content: space-between;
-  border: 1px solid var(--color-light-grey);
+  border: 0.5px solid var(--color-light-grey);
   border-radius: 11px;
+  box-shadow: 0 20px 20px 10px rgba(212, 212, 212, 0.424);
 }
 .about__me__topbar {
   display: flex;
@@ -293,7 +296,7 @@ button {
   height: 16rem;
   padding: 7% 5%;
   border-radius: 32px;
-  background-color: rgba(255, 255, 255, 0.856);
+  background-color: rgba(255, 255, 255, 0.5);
   color: var(--color-black);
 }
 .skillsets ul li {
@@ -331,10 +334,11 @@ button {
   margin: 40px;
 }
 .work__btn {
-  border: 1px solid var(--color-dark-white);
   border-radius: var(--border-radius);
+  box-shadow: 0 3px 3px 3px rgba(155, 155, 155, 0.123);
   font-size: var(--font-regular);
   padding: 8px 48px;
+  margin: 0 8px;
   position: relative;
 }
 .work__btn.selected,
@@ -419,7 +423,7 @@ button {
   margin-top: 8px;
   width: 50px;
   height: 2px;
-  background-color: var(--color-dark-white);
+  background-color: var(--color-white);
 }
 /*Contact*/
 #contact {
@@ -448,7 +452,6 @@ button {
   transform: scale(1.1);
   color: var(--color-light-blue);
 }
-
 .arrow-up {
   position: fixed;
   width: 50px;
@@ -480,14 +483,6 @@ button {
   .section {
     padding: 20px;
   }
-  /*
-  .scrollfixed {
-    height: 100%;
-    min-height: 100%;
-    overflow: hidden !important;
-    touch-action: none;
-  }
-  */
   /*Nav*/
   .navbar__toggle-btn {
     display: block;
@@ -520,6 +515,10 @@ button {
   }
   .navbar__menu.open {
     display: block;
+  }
+  /*Home*/
+  #Home {
+    height: 812px;
   }
   /*About*/
   #About {

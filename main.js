@@ -90,9 +90,6 @@ document.addEventListener('scroll', () => {
   home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
-// AOS
-AOS.init();
-
 // IntersectionObserver
 const sectionIds = [
   '#Home',
