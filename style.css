@@ -94,7 +94,8 @@ button {
 }
 #navbar.navbar--dark {
   z-index: 1;
-  background: var(--color-blue);
+  color: var(--color-blue);
+  background: var(--color-white);
 }
 .navbar__logo {
   font-weight: var(--weight-semi-bold);
@@ -105,19 +106,20 @@ button {
 }
 .navbar_menu__item {
   position: relative;
-  padding: 8px 12px;
-  margin: 0 4px;
+  padding: 8px 0;
+  margin: 0 12px;
+  font-weight: bold;
   cursor: pointer;
   border: 1px solid transparent;
   font-size: var(--font-regular);
 }
 .navbar_menu__item.active {
-  border-bottom: 1px solid var(--color-white);
+  border-bottom: 1px solid var(--color-light-blue);
 }
 .navbar_menu__item::before {
   content: '';
   position: absolute;
-  background: var(--color-light-white);
+  background: var(--color-light-blue);
   width: 0%;
   height: 1px;
   bottom: -1px;
@@ -335,7 +337,7 @@ button {
 }
 .work__btn {
   border-radius: var(--border-radius);
-  box-shadow: 0 3px 3px 3px rgba(155, 155, 155, 0.123);
+  box-shadow: 0 0 8px rgba(75, 75, 75, 0.2);
   font-size: var(--font-regular);
   padding: 8px 48px;
   margin: 0 8px;
@@ -500,21 +502,28 @@ button {
     position: absolute;
     z-index: 1;
     width: 100%;
+    padding-top: 30vh;
     height: 100vh;
-    padding: 45% 39%;
     margin: 0;
     left: 0;
     top: 0;
     flex-direction: column;
+    align-content: center;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.911);
     display: none;
   }
   .navbar_menu__item {
+    width: 25%;
+    margin: auto;
     font-size: var(--font-medium);
   }
   .navbar__menu.open {
     display: block;
+    color: var(--color-white);
+  }
+  .navbar__toggle-btn.open {
+    color: var(--color-white);
   }
   /*Home*/
   #Home {
