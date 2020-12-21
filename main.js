@@ -3,13 +3,16 @@
 // Navbar scroll opacity
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
 document.addEventListener('scroll', () => {
   //console.log(window.scrollY);
   //console.log(`navbarHeight: ${navbarHeight}`);
   if (window.scrollY > navbarHeight) {
     navbar.classList.add('navbar--dark');
+    navbarToggleBtn.classList.add('navbar--dark');
   } else {
     navbar.classList.remove('navbar--dark');
+    navbarToggleBtn.classList.remove('navbar--dark');
   }
 });
 
@@ -26,9 +29,9 @@ navbarMenu.addEventListener('click', (event) => {
 });
 
 // Navbar toggle button for small srceen
-const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
 navbarToggleBtn.addEventListener('click', () => {
   navbarMenu.classList.toggle('open');
+  navbarToggleBtn.classList.toggle('open');
 });
 
 // Hadle click on "contact me" button on home
