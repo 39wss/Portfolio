@@ -4,8 +4,6 @@
   /* Color */
   --color-white: #ffffff;
   --color-light-white: #eeeeee;
-  --color-blue: #102b44;
-  --color-light-blue: #4281bb;
   --color-grey: #616161;
   --color-light-grey: #7c7979;
   --color-black: #000000;
@@ -94,8 +92,9 @@ button {
 }
 #navbar.navbar--dark {
   z-index: 1;
-  color: var(--color-blue);
+  color: var(--color-black);
   background: var(--color-white);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 .navbar__logo {
   font-weight: var(--weight-semi-bold);
@@ -114,12 +113,12 @@ button {
   font-size: var(--font-regular);
 }
 .navbar_menu__item.active {
-  border-bottom: 1px solid var(--color-light-blue);
+  border-bottom: 1px solid var(--color-light-grey);
 }
 .navbar_menu__item::before {
   content: '';
   position: absolute;
-  background: var(--color-light-blue);
+  background: var(--color-light-grey);
   width: 0%;
   height: 1px;
   bottom: -1px;
@@ -142,7 +141,7 @@ button {
   cursor: pointer;
 }
 .navbar__toggle-btn.navbar--dark {
-  color: var(--color-blue);
+  color: var(--color-black);
 }
 /*Home*/
 #Home {
@@ -153,28 +152,29 @@ button {
   align-items: center;
   text-align: center;
 }
-.home__title,
-.home__description {
+.home__title {
   color: var(--color-white);
 }
 .home__contact {
+  position: relative;
   color: var(--color-white);
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
   margin: 24px;
-  padding: 8px 12px;
+  padding: 8px 20px;
   border: 1px solid var(--color-white);
-  border-radius: var(--border-radius);
 }
 .home__contact:hover {
-  color: var(--color-blue);
-  background-color: var(--color-white);
+  color: var(--color-white);
+  background: var(--color-black);
+  border-color: transparent;
 }
 /*About*/
 #About {
   width: 100%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   height: 40rem;
   max-width: 100%;
   margin: 0;
@@ -217,10 +217,10 @@ button {
 }
 .about__me {
   width: 500px;
-  justify-content: space-between;
+  height: 400px;
   border: 0.5px solid var(--color-light-grey);
   border-radius: 11px;
-  box-shadow: 0 20px 20px 10px rgba(212, 212, 212, 0.424);
+  box-shadow: 0 20px 20px 10px rgba(0, 0, 0, 0.05);
 }
 .about__me__topbar {
   display: flex;
@@ -246,14 +246,8 @@ button {
 .circle.green {
   background: #26bf30;
 }
-.about__me-talk h1 {
-  margin-top: 0;
-}
 .about__me__txt {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 90%;
+  height: 100%;
   padding: 40px;
 }
 .about__me h1 {
@@ -280,15 +274,14 @@ button {
 }
 .skillset {
   display: flex;
-  padding: 0 5%;
-  justify-content: space-around;
+  justify-content: center;
   color: var(--color-light-white);
 }
 .skillsets {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px;
+  padding: 20px;
 }
 .skillsets ul {
   display: flex;
@@ -345,7 +338,7 @@ button {
 }
 .work__btn.selected,
 .work__btn:hover {
-  background: var(--color-blue);
+  background: var(--color-black);
   color: var(--color-white);
 }
 .categories__conut {
@@ -382,11 +375,13 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 280px;
+  width: 250px;
   height: 250px;
   margin: 2px;
   position: relative;
   background: var(--color-light-white);
+  border-radius: 15px;
+  overflow: hidden;
 }
 .project.invisible {
   display: none;
@@ -429,7 +424,7 @@ button {
 }
 /*Contact*/
 #contact {
-  background: var(--color-blue);
+  background: var(--color-black);
 }
 #contact section {
   margin: 0px;
@@ -451,8 +446,8 @@ button {
   transition: all var(--annimation-duration) ease-in;
 }
 .contact__link i:hover {
-  transform: scale(1.1);
-  color: var(--color-light-blue);
+  transform: scale(1.2);
+  color: var(--color-light-grey);
 }
 .arrow-up {
   position: fixed;
@@ -462,15 +457,26 @@ button {
   bottom: 50px;
   right: 50px;
   font-size: 35px;
-  background-color: var(--color-light-blue);
+  background-color: var(--color-grey);
   color: var(--color-white);
   opacity: 0;
   transition: opacity 300ms ease-in;
   pointer-events: none;
 }
+.arrow-up:hover {
+  animation: ani 0.5s linear;
+}
 .arrow-up.visible {
   opacity: 1;
   pointer-events: auto;
+}
+@keyframes ani {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 /*For blow 768px screen width*/
 @media all and (max-width: 768px) {
