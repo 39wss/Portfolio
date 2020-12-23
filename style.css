@@ -146,7 +146,7 @@ button {
 /*Home*/
 #Home {
   background: url('imgs/homebackground.jpg') center/ cover no-repeat;
-  height: 1080px;
+  height: 960px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -256,7 +256,8 @@ button {
 /*Skills*/
 #Skills {
   padding: 80px 0;
-  background: url('imgs/skillbackground.jpg') center/ cover no-repeat fixed;
+  background: -webkit-linear-gradient(to bottom, #91EAE4, #86A8E7, #7F7FD5) fixed;
+  background: linear-gradient(to bottom, #91EAE4, #86A8E7, #7F7FD5) fixed;
 }
 #Skills .section_container {
   display: flex;
@@ -380,7 +381,7 @@ button {
   margin: 2px;
   position: relative;
   background: var(--color-light-white);
-  border-radius: 15px;
+  border-radius: 20px;
   overflow: hidden;
 }
 .project.invisible {
@@ -395,10 +396,12 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 10px;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  border-radius: 20px;
   background-color: var(--color-black);
   opacity: 0;
   transform: translateY(10px);
@@ -424,18 +427,17 @@ button {
 }
 /*Contact*/
 #contact {
-  background: var(--color-black);
+  background:var(--color-light-white);
+  color: var(--color-black);
 }
 #contact section {
   margin: 0px;
 }
-.contact__title,
-.contavt__email,
-.contact__rights {
-  color: var(--color-white);
-}
 .contact__title {
-  margin: 32px 0;
+  margin-top: 24px;
+}
+.contavt__email {
+  margin: 0;
 }
 .contact__link {
   font-size: var(--font-large);
@@ -443,11 +445,12 @@ button {
 }
 .contact__link i {
   cursor: pointer;
+  color: var(--color-black);
   transition: all var(--annimation-duration) ease-in;
 }
 .contact__link i:hover {
   transform: scale(1.2);
-  color: var(--color-light-grey);
+  color: var(--color-grey);
 }
 .arrow-up {
   position: fixed;
@@ -464,7 +467,7 @@ button {
   pointer-events: none;
 }
 .arrow-up:hover {
-  animation: ani 0.5s linear;
+  animation: ani 1s linear infinite;
 }
 .arrow-up.visible {
   opacity: 1;
@@ -476,6 +479,7 @@ button {
   }
   50% {
     transform: translateY(-10px);
+    background: linear-gradient(to left, #91EAE4, #7F7FD5);
   }
 }
 /*For blow 768px screen width*/
@@ -534,6 +538,7 @@ button {
   /*Home*/
   #Home {
     height: 812px;
+    padding: 30px;
   }
   /*About*/
   #About {
