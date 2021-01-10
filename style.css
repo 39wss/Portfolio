@@ -312,6 +312,9 @@ button {
 .skillsets ul li img {
   width: 70%;
 }
+.skillsets ul li:hover {
+  animation: skillicon 0.3s infinite ease;
+}
 .skills__percent {
   display: inline-block;
   position: absolute;
@@ -325,6 +328,18 @@ button {
   background-color: var(--color-red);
   color: var(--color-white);
   font-size: var(--font-micro);
+}
+@keyframes skillicon {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(3deg);
+  }
+  75% {
+    transform: rotate(-3deg);
+  }
 }
 /*Work*/
 .work__categories {
