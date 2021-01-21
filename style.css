@@ -392,12 +392,11 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   margin: 2px;
   position: relative;
   background: var(--color-light-white);
-  border-radius: 20px;
   overflow: hidden;
 }
 .project.invisible {
@@ -417,7 +416,6 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 20px;
   background-color: var(--color-black);
   opacity: 0;
   transform: translateY(10px);
